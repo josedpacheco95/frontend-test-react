@@ -1,0 +1,18 @@
+{
+    "id": 11,
+    "user_id": 19,
+    "name": "SCAN DEFI",
+    "slug": "scan-defi",
+    "logo": "/images/logo.svg",
+    "banner": "/images/banner.jpeg",
+    "nif": null,
+    "phone": null,
+    "email": null,
+    "description": null,
+    "tags": [],
+    "address": [],
+    "created_at": "2021-05-20T05:59:22.000000Z",
+    "updated_at": "2021-05-20T07:52:22.000000Z",
+    "deleted_at": null,
+    "menu_languages": ["es", "en", "de", "fr"]
+}
