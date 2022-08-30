@@ -1,24 +1,33 @@
-.tabContainer
-    display: flex
-    height: 125px
-    align-items: center
-    justify-content: center
-    flex-direction: column
-    gap: 0.5rem
-    span
-        font-weight: bold
-        font-size: 26px
+.container
+    height: 100vh
+    .tabContainer
+        top: 0
+        z-index: 10
+        position: sticky
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        gap: 0.5rem
+        height: 15vh
+        span
+            font-weight: bold
+            font-size: 26px
 
-.subTabContainer
-    display: flex
-    flex-direction: row
-    gap: 0.5rem
-    span
-        cursor: pointer
-        font-weight: bold
-        font-size: 20px
-        padding: 10px
-    .active
-        border-radius: 20px
-        background-color: aquamarine
-        color: white
+    .subTabContainer
+        display: flex
+        flex-direction: row
+        gap: 0.5rem
+        
+        span
+            cursor: pointer
+            font-weight: bold
+            font-size: 20px
+            padding: 10px
+        .active
+            border-radius: 20px
+            background-color: aquamarine
+            color: white
+
+    .childrenContainer
+        height: 85vh

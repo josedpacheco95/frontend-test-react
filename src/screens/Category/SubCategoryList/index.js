@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { CategoryContext } from "../../../context/categoryContext";
 import styles from "./SubCategory.module.sass";
 import { getBaseUrl } from "../../../helpers/urlHelpers";
@@ -34,7 +34,9 @@ export const SubCategoryList = () => {
                                 {subcategory.name}
                             </span>
                         </div>
+                        <div>
                         {openSubs.indexOf(subcategory.id) > -1 ? category.name === "COMIDA"? <Food subcategory={subcategory} /> : <Drink subcategory={subcategory}/> : null}
+                        </div>
                     </>
                 ))
                 : null

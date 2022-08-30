@@ -23,6 +23,30 @@ body
 .col-4
     flex: 0 0 auto
     width: 33.33333333%
+.glide
+    .glide-exit
+        z-index: 1
+    .glide-exit-active
+        transform: scale(1) translateX(0%)
+        opacity: 0.3
+        transition: transform, opacity
+        transition-duration: 600ms
+        transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        
+    .glide-enter 
+        transform: scale(1) translateX(100%)
+        z-index: 2
+        opacity: 0
+        transition-delay: 0ms
+    .glide-enter-active 
+        transform: scale(1) translateX(0px)
+        opacity: 1
+        transition: transform, opacity
+        transition-delay: 0ms
+        transition-duration: 600ms
+        transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    
 
-.col-3-sm
+
+
     

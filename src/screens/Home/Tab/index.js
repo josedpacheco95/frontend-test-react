@@ -4,7 +4,7 @@ import cn from "classnames";
 import { CategoryContext } from "../../../context/categoryContext";
 import { MenuContext } from "../../../context/menuContext";
 
-export const Tab = () => {
+export const Tab = ({visible, children}) => {
     const { categories, categoryTabId, setCategoryTabId } = useContext(CategoryContext);
     const { state } = useContext(MenuContext)   
 
@@ -16,21 +16,24 @@ export const Tab = () => {
     };
 
     return (
-        <div className={styles.tabContainer}>
-            <span>{state && state.menu && state.menu.name? state.menu.name: ""}</span>
-            <div className={styles.subTabContainer}>
-                {
-                    categories.map(category => (
-                        <span 
-                            className={cn({
-                                [styles.active]: category.id === categoryTabId
-                            })}
-                            onClick={() => {
-                            handleTab(category);
-                        }}>{category.name}</span>
-                    ))
-                }
+        <div className={styles.container}>
+            <div className={styles.tabContainer}>
+                <span>{state && state.menu && state.menu.name? state.menu.name: ""}</span>
+                <div className={styles.subTabContainer}>
+                    {
+                        categories.map(category => (
+                            <span 
+                                className={cn({
+                                    [styles.active]: category.id === categoryTabId
+                                })}
+                                onClick={() => {
+                                handleTab(category);
+                            }}>{category.name}</span>
+                        ))
+                    }
+                </div>
             </div>
+            <div className={styles.childrenContainer}>{children}</div>
         </div>
     )
 };

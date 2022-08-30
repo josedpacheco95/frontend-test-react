@@ -3,15 +3,17 @@ import Routing from "./containers/Routing/";
 import LanguageOption from "./containers/LanguageOption";
 import MenuContextProvider from "./context/menuContext";
 import CategoryContextProvider from "./context/categoryContext";
-import React, { useEffect } from "react";
-
+import React from "react";
+import { BrowserRouter as Router} from "react-router-dom";
 function App() {
   return (
     <div className="App">
       <MenuContextProvider>
         <CategoryContextProvider>
           <LanguageOption />
-          <Routing />
+          <Router>
+            <Routing />
+          </Router>
         </CategoryContextProvider>
       </MenuContextProvider>
     </div>

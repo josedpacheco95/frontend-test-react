@@ -19,8 +19,9 @@ export const Food = ({subcategory}) => {
         {
             products.map((product, index) => (
                 <div key={`index-${index}`} className={cn("row", styles.foodContainer)}>
-                    <div style={{borderBottom: products.length == (index - 1)? "":"1px solid gainsboro"}} className={cn("col")}>
+                    <div style={{borderBottom: (products && (products.length - 1) == index) ? "" : "1px solid gainsboro"}} className={cn("col")}>
                         <span className={styles.title}>{product && product.name? product?.name: null}</span>
+                        <span className={styles.description}>{product && product.description? product.description: null}</span>
                         <ul className={styles.allergiesContainer}>
                             {product? product?.allergens.map((allergen) => (
                                 <li>
@@ -30,7 +31,7 @@ export const Food = ({subcategory}) => {
                         </ul>
                         <span className={styles.price}>{product && product.price? `${product.price}€` : null}</span>
                     </div>
-                    <div style={{borderBottom: products.length == (index - 1)? "":"1px solid gainsboro"}} className={cn("col", styles.avatar)}>
+                    <div style={{borderBottom: (products && (products.length - 1) == index) ? "" : "1px solid gainsboro"}} className={cn("col", styles.avatar)}>
                         {product && product.image? <img src={`${getBaseUrl()}${product.image}`} /> : null}
                     </div>
                 </div>
