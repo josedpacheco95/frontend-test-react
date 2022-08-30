@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import styles from "./Page.module.sass";
-import CancelTabContainer from "../../containers/CancelTabContainer";
+import CancelTabContainer from "../CancelTabContainer";
 const Page = ({ children, cancelTab = false}) => {
   const { pathname } = useLocation();
 

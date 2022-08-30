@@ -23,8 +23,8 @@ export const Food = ({subcategory}) => {
                         <span className={styles.title}>{product && product.name? product?.name: null}</span>
                         <span className={styles.description}>{product && product.description? product.description: null}</span>
                         <ul className={styles.allergiesContainer}>
-                            {product? product?.allergens.map((allergen) => (
-                                <li>
+                            {product? product?.allergens.map((allergen, index) => (
+                                <li key={`allergy-${index}`}>
                                     <FoodIcon />
                                 </li>
                             )) : null}

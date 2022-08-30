@@ -17,7 +17,7 @@ export const Tab = ({visible, children}) => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.tabContainer}>
+            <div style={{boxShadow: visible? "": "0px 4px 6px 1px rgb(0 0 0 / 35%)"}}className={styles.tabContainer}>
                 <span>{state && state.menu && state.menu.name? state.menu.name: ""}</span>
                 <div className={styles.subTabContainer}>
                     {
@@ -33,7 +33,7 @@ export const Tab = ({visible, children}) => {
                     }
                 </div>
             </div>
-            <div className={styles.childrenContainer}>{children}</div>
+            <div style={{overflowY: visible? "hidden": "auto"}}className={styles.childrenContainer}>{children}</div>
         </div>
     )
 };
