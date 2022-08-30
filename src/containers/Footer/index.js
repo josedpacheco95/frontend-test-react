@@ -57,12 +57,12 @@ export const FooterContainer = () => {
         <div className={styles.copyright}>
           <span className={styles.appName}>Scan Defi</span>
           <div className={styles.socialMedia}>
-            <Instragram />
-            <Facebook />
+            <a href="#"><Instragram /></a>
+            <a href="#"><Facebook /></a>
           </div>
-          <span>Terms and conditions</span>
-          <span>Privacy policy</span>
-          <span>Legal warning</span>
+          <a href="#"><span>Terms and conditions</span></a>
+          <a href="#"><span>Privacy policy</span></a>
+          <a href="#"><span>Legal warning</span></a>
         </div>
       </div>
       <div>

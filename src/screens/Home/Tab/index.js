@@ -17,7 +17,7 @@ export const Tab = ({visible, children}) => {
 
     return (
         <div className={styles.container}>
-            <div style={{boxShadow: visible? "": "0px 4px 6px 1px rgb(0 0 0 / 35%)"}}className={styles.tabContainer}>
+            <div style={{boxShadow: visible? "": "0px 4px 1px 1px rgb(0 0 0 / 35%)"}}className={styles.tabContainer}>
                 <span>{state && state.menu && state.menu.name? state.menu.name: ""}</span>
                 <div className={styles.subTabContainer}>
                     {
